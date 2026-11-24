@@ -1,4 +1,9 @@
 # Check_Pro_Security_Status
+[![Build](https://github.com/conFrituur/check_pro_security_status/actions/workflows/build.yml/badge.svg)](https://github.com/conFrituur/check_pro_security_status/actions/workflows/build.yml)
+[![Coverage](https://raw.githubusercontent.com/conFrituur/check_pro_security_status/refs/heads/coverage-badge/coverage.svg)](https://github.com/conFrituur/check_pro_security_status/actions/workflows/build.yml)
+[![uv](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2FconFrituur%2Fcheck_pro_security_status%2Frefs%2Fheads%2Fmain%2Fpyproject.toml&style=flat&logo=python&logoColor=lightgrey
+)](https://www.python.org)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 
 Icinga/Nagios plugin that checks the Ubuntu Pro security status (`pro security-status`). It requires Python >=3.12 and has no third-party runtime dependencies.
 
