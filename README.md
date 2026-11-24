@@ -5,9 +5,7 @@
 )](https://www.python.org)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 
-Icinga/Nagios plugin that checks the Ubuntu Pro security status (`pro security-status`). It requires Python >=3.12 and has no third-party runtime dependencies.
-
-The check runs the client once and evaluates the Ubuntu Pro attachment, the ESM services, the pending security updates and the reboot state of that single output. The worst state wins. The JSON fields are taken from the [Ubuntu Pro client source](https://github.com/canonical/ubuntu-pro-client/blob/main/uaclient/security_status.py) (`_schema_version` 0.1).
+Icinga/Nagios plugin that checks the Ubuntu Pro security status (`pro security-status`).
 
 It complements [check_canonical_livepatch_status](https://github.com/conFrituur/check_canonical_livepatch_status): this check looks at the installed packages, the Livepatch check looks at the running kernel and the Livepatch client health.
 
