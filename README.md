@@ -76,13 +76,28 @@ CRITICAL - machine is not attached to an Ubuntu Pro subscription ; 0 CVEs fixed 
 ```icinga2
 object CheckCommand "pro-security-status" {
     import "plugin-check-command"
-    command = [ PluginDir + "/check_pro_security_status.py" ]
+    command = [ PluginDir + "/check_pro_security_status" ]
+    timeout = 1m
     arguments += {
-        "--warning-updates" = "$pro_security_warning_updates$"
-        "--critical-updates" = "$pro_security_critical_updates$"
-        "--list-livepatch-cves" = {
-            set_if = "$pro_security_list_livepatch_cves$"
+        "-c" = {
+            description = "fail when at least this many packages have installable security updates (default: 10)"
+            repeat_key = false
+            required = false
+            value = "$pro_security_updates_critical$"
+        }
+        "-l" = {
+            description = "list the CVEs fixed by Livepatch, one per line, after the status line"
+            repeat_key = false
+            required = false
+            value = "$pro_security_list_livepatch_cves$"
+        }
+        "-w" = {
+            description = "warn when at least this many packages have installable security updates (default: 1)"
+            repeat_key = false
+            required = false
+            value = "$pro_security_updates_warning$"
         }
     }
+}
 }
 ```
